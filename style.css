@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url('images/background.jpg') no-repeat center/cover;
+    background: url('background.jpg') no-repeat center/cover;
     min-height: 100vh;
     color: #fff;
     text-align: center;
@@ -206,7 +206,89 @@ nav a:hover {
 }
 
 .big-card p {
-    font-size: 16px;
+    font-size: 15px;
+    text-align: justify;
     opacity: 0.92;
     padding: 0 15px 15px;
 }
+/* Tips Section */
+.tips-section {
+    margin: 80px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.tips-section h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: #00d8ff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Flex container for tips */
+.tips-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Individual tip card */
+.how1 {
+    flex: 1 1 45%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 25px 20px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    text-align: left;
+    color: #fff;
+    min-width: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Text */
+.how1 p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.how1 strong {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #00d8ff;
+}
+
+/* Hover animation with subtle gradient glow */
+.how1::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(135deg, #00d8ff, #6a5af9, #00d8ff);
+    top: -100%;
+    left: -100%;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0.2;
+}
+
+.how1:hover::before {
+    top: -10%;
+    left: -10%;
+}
+
+.how1:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 0 30px rgba(0, 216, 255, 0.5);
+}
+
+
+
+
